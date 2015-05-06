@@ -14,12 +14,12 @@ output:
     toc: yes
 ---
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, warning=FALSE,error=FALSE,results='hide',}
 library(knitr)    # for fancy table support
 library(ggplot2)  # fancy graphics
 library(reshape2) # easy modification
 library(car)      # that recode will come in handy!
-library(texreg)   # fancy regression tables & plots
+library(texreg,quietly = T)   # fancy regression tables & plots
 
 # Let's load some datas!
 finals   <- read.table("final.txt",sep="\t",header = T, dec=",")
@@ -34,9 +34,9 @@ start_and_end <- merge(finals,training,by="nr",suffixes = c(".start",".finals"))
 
 # So we went karting....
 
-'T was one of Daan's last days as a bachelor, and he decided he had little too lose: Let's go karting!
+'T was one of Daan's last days as a bachelor, and he decided he had little to lose: Let's go karting!
 
-But who won, and why? Let's use this as a quick-'n-dirty presentation of R-markdown, the wonderous world of ANCOVA and how people learn how to go-karting!
+But who won, and why? Let's use this as a quick-'n-dirty presentation of R-markdown, the wonderous world of linear modelling and how people learn how to go-karting!
 
 ## Let's start with the end: the winners
 
@@ -81,7 +81,6 @@ kartdata$df_num <- factor(kartdata$df_num, levels=levels(kartdata$df_num)[c(5,2:
 ggplot(kartdata,aes(x=df_num,y=pos,colour=name))+
   geom_line(aes(group=name),size=3)+
   geom_point(line="white",size=6)+
-  geom_text(aes(label=name),colour="black",line="white",vjust=-1)+
   scale_y_reverse()+# inverted y-axis to be more intuitive (you want being on top to be on top right? ) 
   xlab("round")+    # x-axis label
   ylab("position")+ # y-axis label
@@ -99,7 +98,6 @@ If we look at it from the perspective of personal improvement, what does that gi
 ggplot(kartdata,aes(x=df_num,y=avg, colour=name))+
   geom_line(aes(group=name),size=3)+
   geom_point(line="white",size=6)+
-  geom_text(aes(label=name),colour="black",line="white",vjust=-1)+
   scale_y_reverse()+xlab("round")+ ylab("inverted time")+ggtitle("Personal round averages throughout the rounds")
 
 wide_kart <- reshape(data = kartdata,direction="wide", timevar="df_num",idvar="name")
@@ -115,7 +113,7 @@ roundnames <- character()
 for(n in paste(".",unique(kartdata$df_num),sep="")) for (ni in paste("X",1:15,n,sep="")) if (ni %in% names(wide_kart)) roundnames <- c(roundnames,ni)
 wide_kart$rounds <- apply(wide_kart[roundnames],1,function(x){sum(!is.na(x))})
 
-m <- lm(avg.Finals~avg.Training+improvement+rounds,wide_kart)
+m <- lm(avg.Finals~avg.Training*rounds,wide_kart)
 summary(m)
 plotreg(m)
 
