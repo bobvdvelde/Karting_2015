@@ -43,7 +43,7 @@ But who won, and why? Let's use this as a quick-'n-dirty presentation of R-markd
 We'll get it over with: Daan didn't quite win (and neither did I). So who did?
 
 ```{r}
-kable(finals[c("pos","name","avg")])
+kable(finals[c("pos","name","avg")], format="markdown")
 finals$name <- factor(finals$name,levels=(finals$name[order(finals$pos)]),ordered = T,)
 ggplot(finals,aes(x=name,y=avg))+stat_identity(geom="bar")
 
