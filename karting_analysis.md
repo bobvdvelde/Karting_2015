@@ -24,23 +24,23 @@ We'll get it over with: Daan didn't quite win (and neither did I). So who did?
 
 
 ```r
-kable(finals[c("pos","name","avg")])
+kable(finals[c("pos","name","avg")], format="markdown")
 ```
 
 
 
- pos  name          avg
-----  ---------  ------
-   1  Dietrick    38.42
-   2  Jeroen      38.82
-   3  Bob         39.13
-   4  Paul        39.08
-   5  Ruben       39.37
-   6  Daan        39.47
-   7  Joost       40.01
-   8  Steven      40.23
-   9  Alice       45.89
-  10  Thijs       48.33
+| pos|name     |   avg|
+|---:|:--------|-----:|
+|   1|Dietrick | 38.42|
+|   2|Jeroen   | 38.82|
+|   3|Bob      | 39.13|
+|   4|Paul     | 39.08|
+|   5|Ruben    | 39.37|
+|   6|Daan     | 39.47|
+|   7|Joost    | 40.01|
+|   8|Steven   | 40.23|
+|   9|Alice    | 45.89|
+|  10|Thijs    | 48.33|
 
 ```r
 finals$name <- factor(finals$name,levels=(finals$name[order(finals$pos)]),ordered = T,)
