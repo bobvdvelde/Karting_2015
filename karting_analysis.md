@@ -86,22 +86,112 @@ wide_kart$improvement <- wide_kart$avg.Training - wide_kart$avg.Finals
 kable(wide_kart[order(wide_kart$improvement,decreasing=T),c("name","improvement","avg.Training" ,"avg.Finals","pos.Training","pos.Finals")],caption = "Time improvement between training and round 10 averages")
 ```
 
-
-
-Table: Time improvement between training and round 10 averages
-
-     name        improvement   avg.Training   avg.Finals   pos.Training   pos.Finals
----  ---------  ------------  -------------  -----------  -------------  -----------
-3    Steven            12.69          52.92        40.23              3            8
-8    Jeroen            11.65          50.47        38.82              8            2
-6    Bob               11.23          50.36        39.13              6            3
-1    Dietrick          11.16          49.58        38.42              1            1
-7    Joost             11.06          51.07        40.01              7            7
-5    Ruben             10.90          50.27        39.37              5            5
-4    Paul               9.40          48.48        39.08              4            4
-2    Daan               9.06          48.53        39.47              2            6
-9    Alice              5.71          51.60        45.89              9            9
-10   Thijs              4.71          53.04        48.33             10           10
+<table>
+<caption>Time improvement between training and round 10 averages</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> name </th>
+   <th style="text-align:right;"> improvement </th>
+   <th style="text-align:right;"> avg.Training </th>
+   <th style="text-align:right;"> avg.Finals </th>
+   <th style="text-align:right;"> pos.Training </th>
+   <th style="text-align:right;"> pos.Finals </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> Steven </td>
+   <td style="text-align:right;"> 12.69 </td>
+   <td style="text-align:right;"> 52.92 </td>
+   <td style="text-align:right;"> 40.23 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> Jeroen </td>
+   <td style="text-align:right;"> 11.65 </td>
+   <td style="text-align:right;"> 50.47 </td>
+   <td style="text-align:right;"> 38.82 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> Bob </td>
+   <td style="text-align:right;"> 11.23 </td>
+   <td style="text-align:right;"> 50.36 </td>
+   <td style="text-align:right;"> 39.13 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Dietrick </td>
+   <td style="text-align:right;"> 11.16 </td>
+   <td style="text-align:right;"> 49.58 </td>
+   <td style="text-align:right;"> 38.42 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> Joost </td>
+   <td style="text-align:right;"> 11.06 </td>
+   <td style="text-align:right;"> 51.07 </td>
+   <td style="text-align:right;"> 40.01 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> Ruben </td>
+   <td style="text-align:right;"> 10.90 </td>
+   <td style="text-align:right;"> 50.27 </td>
+   <td style="text-align:right;"> 39.37 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> Paul </td>
+   <td style="text-align:right;"> 9.40 </td>
+   <td style="text-align:right;"> 48.48 </td>
+   <td style="text-align:right;"> 39.08 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> Daan </td>
+   <td style="text-align:right;"> 9.06 </td>
+   <td style="text-align:right;"> 48.53 </td>
+   <td style="text-align:right;"> 39.47 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> Alice </td>
+   <td style="text-align:right;"> 5.71 </td>
+   <td style="text-align:right;"> 51.60 </td>
+   <td style="text-align:right;"> 45.89 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:left;"> Thijs </td>
+   <td style="text-align:right;"> 4.71 </td>
+   <td style="text-align:right;"> 53.04 </td>
+   <td style="text-align:right;"> 48.33 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+</tbody>
+</table>
 
 So did the best learner win? It's not quite clear from that little diddy. So we'll throw it through a simple lm, just for the heck of it. But wait, how do the extra rounds figure into this (if your quick, you can do more rounds...)
 

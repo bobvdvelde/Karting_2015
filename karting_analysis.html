@@ -187,111 +187,266 @@ img {
 
 <span class="kw">kable</span>(wide_kart[<span class="kw">order</span>(wide_kart$improvement,<span class="dt">decreasing=</span>T),<span class="kw">c</span>(<span class="st">&quot;name&quot;</span>,<span class="st">&quot;improvement&quot;</span>,<span class="st">&quot;avg.Training&quot;</span> ,<span class="st">&quot;avg.Finals&quot;</span>,<span class="st">&quot;pos.Training&quot;</span>,<span class="st">&quot;pos.Finals&quot;</span>)],<span class="dt">caption =</span> <span class="st">&quot;Time improvement between training and round 10 averages&quot;</span>)</code></pre>
 <table>
-<caption>Time improvement between training and round 10 averages</caption>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">name</th>
-<th align="right">improvement</th>
-<th align="right">avg.Training</th>
-<th align="right">avg.Finals</th>
-<th align="right">pos.Training</th>
-<th align="right">pos.Finals</th>
-</tr>
-</thead>
+<caption>
+Time improvement between training and round 10 averages
+</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> 
+name
+</th>
+   <th style="text-align:right;"> 
+improvement
+</th>
+   <th style="text-align:right;"> 
+avg.Training
+</th>
+   <th style="text-align:right;"> 
+avg.Finals
+</th>
+   <th style="text-align:right;"> 
+pos.Training
+</th>
+   <th style="text-align:right;"> 
+pos.Finals
+</th>
+  </tr>
+ </thead>
 <tbody>
-<tr class="odd">
-<td align="left">3</td>
-<td align="left">Steven</td>
-<td align="right">12.69</td>
-<td align="right">52.92</td>
-<td align="right">40.23</td>
-<td align="right">3</td>
-<td align="right">8</td>
-</tr>
-<tr class="even">
-<td align="left">8</td>
-<td align="left">Jeroen</td>
-<td align="right">11.65</td>
-<td align="right">50.47</td>
-<td align="right">38.82</td>
-<td align="right">8</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">6</td>
-<td align="left">Bob</td>
-<td align="right">11.23</td>
-<td align="right">50.36</td>
-<td align="right">39.13</td>
-<td align="right">6</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">1</td>
-<td align="left">Dietrick</td>
-<td align="right">11.16</td>
-<td align="right">49.58</td>
-<td align="right">38.42</td>
-<td align="right">1</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">7</td>
-<td align="left">Joost</td>
-<td align="right">11.06</td>
-<td align="right">51.07</td>
-<td align="right">40.01</td>
-<td align="right">7</td>
-<td align="right">7</td>
-</tr>
-<tr class="even">
-<td align="left">5</td>
-<td align="left">Ruben</td>
-<td align="right">10.90</td>
-<td align="right">50.27</td>
-<td align="right">39.37</td>
-<td align="right">5</td>
-<td align="right">5</td>
-</tr>
-<tr class="odd">
-<td align="left">4</td>
-<td align="left">Paul</td>
-<td align="right">9.40</td>
-<td align="right">48.48</td>
-<td align="right">39.08</td>
-<td align="right">4</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="left">Daan</td>
-<td align="right">9.06</td>
-<td align="right">48.53</td>
-<td align="right">39.47</td>
-<td align="right">2</td>
-<td align="right">6</td>
-</tr>
-<tr class="odd">
-<td align="left">9</td>
-<td align="left">Alice</td>
-<td align="right">5.71</td>
-<td align="right">51.60</td>
-<td align="right">45.89</td>
-<td align="right">9</td>
-<td align="right">9</td>
-</tr>
-<tr class="even">
-<td align="left">10</td>
-<td align="left">Thijs</td>
-<td align="right">4.71</td>
-<td align="right">53.04</td>
-<td align="right">48.33</td>
-<td align="right">10</td>
-<td align="right">10</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> 
+3
+</td>
+   <td style="text-align:left;"> 
+Steven
+</td>
+   <td style="text-align:right;"> 
+12.69
+</td>
+   <td style="text-align:right;"> 
+52.92
+</td>
+   <td style="text-align:right;"> 
+40.23
+</td>
+   <td style="text-align:right;"> 
+3
+</td>
+   <td style="text-align:right;"> 
+8
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+8
+</td>
+   <td style="text-align:left;"> 
+Jeroen
+</td>
+   <td style="text-align:right;"> 
+11.65
+</td>
+   <td style="text-align:right;"> 
+50.47
+</td>
+   <td style="text-align:right;"> 
+38.82
+</td>
+   <td style="text-align:right;"> 
+8
+</td>
+   <td style="text-align:right;"> 
+2
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+6
+</td>
+   <td style="text-align:left;"> 
+Bob
+</td>
+   <td style="text-align:right;"> 
+11.23
+</td>
+   <td style="text-align:right;"> 
+50.36
+</td>
+   <td style="text-align:right;"> 
+39.13
+</td>
+   <td style="text-align:right;"> 
+6
+</td>
+   <td style="text-align:right;"> 
+3
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+1
+</td>
+   <td style="text-align:left;"> 
+Dietrick
+</td>
+   <td style="text-align:right;"> 
+11.16
+</td>
+   <td style="text-align:right;"> 
+49.58
+</td>
+   <td style="text-align:right;"> 
+38.42
+</td>
+   <td style="text-align:right;"> 
+1
+</td>
+   <td style="text-align:right;"> 
+1
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+7
+</td>
+   <td style="text-align:left;"> 
+Joost
+</td>
+   <td style="text-align:right;"> 
+11.06
+</td>
+   <td style="text-align:right;"> 
+51.07
+</td>
+   <td style="text-align:right;"> 
+40.01
+</td>
+   <td style="text-align:right;"> 
+7
+</td>
+   <td style="text-align:right;"> 
+7
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+5
+</td>
+   <td style="text-align:left;"> 
+Ruben
+</td>
+   <td style="text-align:right;"> 
+10.90
+</td>
+   <td style="text-align:right;"> 
+50.27
+</td>
+   <td style="text-align:right;"> 
+39.37
+</td>
+   <td style="text-align:right;"> 
+5
+</td>
+   <td style="text-align:right;"> 
+5
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+4
+</td>
+   <td style="text-align:left;"> 
+Paul
+</td>
+   <td style="text-align:right;"> 
+9.40
+</td>
+   <td style="text-align:right;"> 
+48.48
+</td>
+   <td style="text-align:right;"> 
+39.08
+</td>
+   <td style="text-align:right;"> 
+4
+</td>
+   <td style="text-align:right;"> 
+4
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+2
+</td>
+   <td style="text-align:left;"> 
+Daan
+</td>
+   <td style="text-align:right;"> 
+9.06
+</td>
+   <td style="text-align:right;"> 
+48.53
+</td>
+   <td style="text-align:right;"> 
+39.47
+</td>
+   <td style="text-align:right;"> 
+2
+</td>
+   <td style="text-align:right;"> 
+6
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+9
+</td>
+   <td style="text-align:left;"> 
+Alice
+</td>
+   <td style="text-align:right;"> 
+5.71
+</td>
+   <td style="text-align:right;"> 
+51.60
+</td>
+   <td style="text-align:right;"> 
+45.89
+</td>
+   <td style="text-align:right;"> 
+9
+</td>
+   <td style="text-align:right;"> 
+9
+</td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 
+10
+</td>
+   <td style="text-align:left;"> 
+Thijs
+</td>
+   <td style="text-align:right;"> 
+4.71
+</td>
+   <td style="text-align:right;"> 
+53.04
+</td>
+   <td style="text-align:right;"> 
+48.33
+</td>
+   <td style="text-align:right;"> 
+10
+</td>
+   <td style="text-align:right;"> 
+10
+</td>
+  </tr>
 </tbody>
 </table>
+
 <p>So did the best learner win? It’s not quite clear from that little diddy. So we’ll throw it through a simple lm, just for the heck of it. But wait, how do the extra rounds figure into this (if your quick, you can do more rounds…)</p>
 <pre class="sourceCode r"><code class="sourceCode r">roundnames &lt;-<span class="st"> </span><span class="kw">character</span>()
 for(n in <span class="kw">paste</span>(<span class="st">&quot;.&quot;</span>,<span class="kw">unique</span>(kartdata$df_num),<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)) for (ni in <span class="kw">paste</span>(<span class="st">&quot;X&quot;</span>,<span class="dv">1</span>:<span class="dv">15</span>,n,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)) if (ni %in%<span class="st"> </span><span class="kw">names</span>(wide_kart)) roundnames &lt;-<span class="st"> </span><span class="kw">c</span>(roundnames,ni)

@@ -22,7 +22,7 @@ library(car)      # that recode will come in handy!
 library(texreg,quietly = T)   # fancy regression tables & plots
 
 # make sure tables format correctly for github
-options(knitr.table.format = "pandoc")
+options(knitr.table.format = "html")
 
 # Let's load some datas!
 finals   <- read.table("final.txt",sep="\t",header = T, dec=",")
