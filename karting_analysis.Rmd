@@ -10,7 +10,6 @@ output:
     highlight: monochrome
     keep_md: yes
     number_sections: yes
-    theme: journal
     toc: yes
 ---
 
